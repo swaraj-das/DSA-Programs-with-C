@@ -21,6 +21,15 @@ Welcome to the **DSA Programs** repository! This repository contains various pro
 4. `reverse_string.c` - Stack application for reversing strings.
 5. `stack.c` - Basic stack operations implementation.
 
+### **Search**
+1. `binary_search-recursive.c` - Recursive implementation of binary search.
+2. `binary_search.c` - Iterative implementation of binary search.
+
+### **Linear Search**
+1. `array.c` - Linear Search in arrays with static memory allocation.
+2. `malloc.c` - Linear Search in arrays with dynamic memory allocation using `malloc()`.
+
+
 ---
 
 Feel free to explore the programs and contribute! 🚀
