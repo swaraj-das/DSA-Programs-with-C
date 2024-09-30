@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-#define SIZE 5  // Define the size of the circular queue
+#define SIZE 5  
 
 int queue[SIZE];
 int front = -1, rear = -1;
 
-// Function to check if the queue is full
 int isFull() {
     return ((rear + 1) % SIZE == front);
 }
@@ -16,46 +14,40 @@ int isEmpty() {
     return (front == -1);
 }
 
-// Function to insert an element into the circular queue
-void enqueue(int value) {
+void CQinsertion(int value) {
     if (isFull()) {
         printf("Queue Overflow! Cannot insert %d\n", value);
         return;
     }
-    // If the queue is empty, set front and rear to 0
     if (isEmpty()) {
         front = rear = 0;
-    } else {
-        // Move rear to the next position in a circular manner
+    } 
+    else {
         rear = (rear + 1) % SIZE;
     }
     queue[rear] = value;
     printf("Inserted %d\n", value);
 }
 
-// Function to remove an element from the circular queue
-int dequeue() {
+
+int CQdeletion() {
     if (isEmpty()) {
         printf("Queue Underflow! Cannot dequeue\n");
         return -1;
     }
-
     int data = queue[front];
-    
-    // If only one element was present, reset the queue
     if (front == rear) {
         front = rear = -1;
-    } else {
-        // Move front to the next position in a circular manner
+    } 
+    else {
         front = (front + 1) % SIZE;
     }
     
-    printf("Dequeued %d\n", data);
+    printf("Deleted %d\n", data);
     return data;
 }
 
-// Function to display the elements of the queue
-void displayQueue() {
+void displayCQ() {
     if (isEmpty()) {
         printf("Queue is empty\n");
         return;
@@ -76,21 +68,21 @@ int main() {
     printf("\n---Circular Queue---\n");
     int value;
     while (1) {
-        printf("1.Enqueue\t2.Dequeue\t3.Display\t4.Exit\n");
+        printf("1.Insert\t2.Delete\t3.Display\t4.Exit\n");
         int choice;
         printf("Enter a choice: ");
         scanf("%d", &choice);
         switch (choice){
             case 1:
-                printf("Enter the value to enqueue: ");
+                printf("Enter the value to insert: ");
                 scanf("%d", &value);
-                enqueue(value);
+                CQinsertion(value);
                 break;
             case 2:
-                dequeue();
+                CQdeletion();
                 break;
             case 3:
-                displayQueue();
+                displayCQ();
                 break;
             case 4:
                 exit(0);
