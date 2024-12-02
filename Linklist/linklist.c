@@ -100,6 +100,34 @@ void sllDeleteAtEnd(){
 	printf("Last node deleted successfully.\n");
 }
 
+void sllDeleteAtanyPos(int pos){
+	struct node* temp, *prev;
+    if(start==NULL){
+        printf("List is empty.\n");
+        return;
+    }
+    temp=start;
+    if(pos==1){
+        start=start->link;
+        free(temp);
+        temp=NULL;
+        printf("First node deleted successfully.\n");
+        return;
+    }
+    for(int i=1; i<=pos-2 && temp!=NULL; i++){
+        prev=temp;
+        temp=temp->link;
+    }
+    if(temp==NULL){
+        printf("Invalid Position!!!");
+        return;
+    }
+    prev->link=temp->link;
+    free(temp);
+    temp=NULL;
+    printf("Node deleted successfully at position %d.\n", pos);
+}
+
 void sllDisplay(){
 	struct node* ptr;
 
@@ -125,8 +153,9 @@ int main(void){
 		printf("3. Insert at specific position\n");
 		printf("4. Delete at begin\n");
 		printf("5. Delete at end\n");
-		printf("6. Display\n");
-		printf("7. Exit\n");
+		printf("6. Delete at specific position\n");
+		printf("7. Display\n");
+		printf("8. Exit\n");
 		printf("Enter your choice: ");
 		scanf("%d",&ch);
 		
@@ -135,17 +164,17 @@ int main(void){
 		                printf("Enter the item : ");
 		                scanf("%d",&item);
 		                sllInsertAtBegin(item);
-                		break;
+		                break;
 			case 2:
 		                printf("Enter the item : ");
 		                scanf("%d",&item);
 		                sllInsertAtEnd(item);
-                		break;
+		                break;
 			case 3:
 			    	printf("Enter the position : ");
 				scanf("%d",&pos);
 				printf("Enter the item : ");
-                		scanf("%d",&item);
+               			scanf("%d",&item);
                 		sllInsertAtanyPos(pos, item);
 				break;
 			case 4:
@@ -155,12 +184,17 @@ int main(void){
 				sllDeleteAtEnd();
 				break;
 			case 6:
-                		sllDisplay();
-                		break;
+				printf("Enter the position : ");
+				scanf("%d",&pos);
+				sllDeleteAtanyPos(pos);
+				break;
 			case 7:
+		                sllDisplay();
+		                break;
+			case 8:
 				printf("Thank you for using !! Bye.");
 				exit(0);
-            		default:
+            default:
 				printf("Wrong option !!! Please select a valid option\n");
 		}
 	}
