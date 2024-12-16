@@ -217,6 +217,33 @@ int CountNodes()
 	return count;
 }
 
+void DeleteValuesGreaterThanX(int item){
+	if(start==NULL){
+		printf("No node to delete...");
+	    return;
+	}
+	struct node *ptr, *prev;
+	ptr=start;
+	while(ptr!=NULL){
+		if(start->data>item){
+			printf("Deleting %d\n", start->data);
+			start=start->link;
+			free(ptr);
+			ptr=start;
+		}
+		else if(ptr->data>item){
+			printf("Deleting %d\n", ptr->data);
+			prev->link=ptr->link;
+            free(ptr);
+            ptr=prev->link;
+		}
+		else{
+			prev=ptr;
+            ptr=ptr->link;
+		}
+	}
+}
+
 int main(void)
 {
 	int ch, item, pos;
@@ -232,7 +259,8 @@ int main(void)
 		printf("7. Display\n");
 		printf("8. Find Max & Min Value\n");
 		printf("9. Count the Nodes\n");
-		printf("10. Exit\n");
+		printf("10. Delete values greater than x\n");
+		printf("11. Exit\n");
 		printf("Enter your choice: ");
 		scanf("%d", &ch);
 
@@ -276,6 +304,11 @@ int main(void)
 			printf("The Number of Nodes: %d", CountNodes());
 			break;
 		case 10:
+			printf("Enter the value: ");
+			scanf("%d", &item);
+			DeleteValuesGreaterThanX(item);
+			break;
+		case 11:
 			printf("Thank you for using !! Bye.");
 			exit(0);
 		default:
