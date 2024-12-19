@@ -1,42 +1,61 @@
-# 📚 DSA Programs
+# DSA Programs with C
 
-Welcome to the **DSA Programs** repository! This repository contains various programs demonstrating important data structure and algorithm (DSA) concepts.
+Welcome to the **DSA Programs with C** repository! 🎉 This repository contains various Data Structures and Algorithms (DSA) implementations in the C programming language. Each program is designed to help you understand and practice fundamental DSA concepts.
 
-## 📂 Folder Structure
-- **Deletion Operation** - Programs showcasing deletion operations in different data structures.
-- **Queue** - Programs demonstrating queue operations, including insertion, deletion, and display functions and circular queue. 
-- **Stack** - Stack-based programs, including postfix evaluation.
-- **Binary Search** - Implementation of binary search.
-- **Linear Search** - Implementation of linear search.
+## 📂 Repository Structure
 
-## 💻 Programs Overview
+Below is the list of available programs. Click on the program name to view its source code:
 
-### **Deletion Operation**
-1. `array.c` - Deletion in arrays with static memory allocation.
-2. `malloc.c` - Deletion in arrays with dynamic memory allocation using `malloc()`.
+### Array Operations
+- [Array Deletion and Linear Search (Static Memory Allocation)](./array.c)
+- [Array Deletion and Linear Search (Dynamic Memory Allocation)](./malloc.c)
 
-### **Queue**  
+### Stack-Based Programs
+- [Binary to Decimal Conversion](./bin-to-dec.c)
+- [Infix to Postfix Conversion](./infix-to-postfix.c)
+- [Postfix Evaluation](./postfix-evaluation.c)
+- [String Reversal](./reverse_string.c)
+- [Stack Implementation](./stack.c)
 
-1. `linearQ.c` - Program which shows insertion, deletion, display of a linear array based queue.  
-2. `circular-queue.c` - Program which shows insertion, deletion, display of a circular array based queue.  
+## 🚀 Getting Started
 
-### **Stack**
-1. `bin-to-dec.c` - Binary to decimal number converter using stack.
-2. `infix-to-postfix.c` - Infix to postfix conversion using stack.
-3. `postfix-evaluation.c` - Postfix evaluation using stack.
-4. `reverse_string.c` - Stack application for reversing strings.
-5. `stack.c` - Basic stack operations implementation.
+1. Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/swaraj-das/DSA-Programs-with-C.git
+   ```
 
-### **Search**
-1. `binary_search-recursive.c` - Recursive implementation of binary search.
-2. `binary_search.c` - Iterative implementation of binary search.
+2. Navigate to the repository directory:
+   ```bash
+   cd DSA-Programs-with-C
+   ```
 
-### **Linear Search**
-1. `array.c` - Linear Search in arrays with static memory allocation.
-2. `malloc.c` - Linear Search in arrays with dynamic memory allocation using `malloc()`.
+3. Compile and run any program using a C compiler like `gcc`. For example:
+   ```bash
+   gcc array.c -o array
+   ./array
+   ```
 
+## 🛠️ Prerequisites
+
+Make sure you have the following installed on your system:
+- A C compiler (e.g., GCC)
+- Basic knowledge of Data Structures and Algorithms
+
+## 🤝 Contribution Guidelines
+
+Contributions are always welcome! If you'd like to:
+- Fix a bug
+- Improve documentation
+- Add a new program
+
+Feel free to fork this repository and create a pull request. Please ensure your contributions align with the coding and documentation standards.
+
+## 📧 Contact
+
+If you have any questions or suggestions, feel free to contact me:
+- **GitHub**: [swaraj-das](https://github.com/swaraj-das)
+- **Email**: [swarajdas625w@gmail.com](mailto:swarajdas625w@gmail.com)
 
 ---
 
-Feel free to explore the programs and contribute! 🚀
-- ## Keep Learning ✨
+🌟 **Happy Coding!** 🌟
