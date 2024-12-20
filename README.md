@@ -11,10 +11,6 @@ Welcome to the **DSA Programs** repository! This repository contains various pro
 
 ## 💻 Programs Overview
 
-### **Deletion Operation**
-1. `array.c` - Deletion in arrays with static memory allocation.
-2. `malloc.c` - Deletion in arrays with dynamic memory allocation using `malloc()`.
-
 ### **Queue**  
 
 1. `linearQ.c` - Program which shows insertion, deletion, display of a linear array based queue.  
